@@ -7,7 +7,6 @@
 #include "RecipeBuildArguments.h"
 #include "recipe/PackageIdentifier.h"
 #include "recipe/RecipeCache.h"
-#include "utilities/HandledException.h"
 #include "BuildConstants.h"
 #include "KnownLanguage.h"
 
@@ -27,10 +26,7 @@ namespace Soup::Core
 	/// It is responsible for loading up the entire closure and validating build state to
 	/// create a package graph that can be evaluated by the build runner.
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class BuildLoadEngine
+	export class BuildLoadEngine
 	{
 	private:
 		const int _packageLockVersion = 5;
